@@ -1,0 +1,25 @@
+From 3c5134f8975b84479248779c61504db90567b834 Mon Sep 17 00:00:00 2001
+From: Iyappan Subramanian <isubramanian@amamperecomputing.com>
+Date: Fri, 31 Mar 2023 19:09:44 +0000
+Subject: [PATCH 2/2] Changed logger level
+
+---
+ detect.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/detect.py b/detect.py
+index c699a74..6d87472 100644
+--- a/detect.py
++++ b/detect.py
+@@ -201,7 +201,7 @@ def run(
+                     vid_writer[i].write(im0)
+ 
+         # Print time (inference-only)
+-        LOGGER.info(f'{s}Done. ({t3 - t2:.3f}s)')
++        LOGGER.debug(f'{s}Done. ({t3 - t2:.3f}s)')
+ 
+     # Print results
+     t = tuple(x / seen * 1E3 for x in dt)  # speeds per image
+-- 
+2.25.1
+

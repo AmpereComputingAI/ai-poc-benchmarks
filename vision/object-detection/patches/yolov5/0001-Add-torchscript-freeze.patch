@@ -1,0 +1,27 @@
+From 78158f70c55254f884deb141c60ab1629f3ab21c Mon Sep 17 00:00:00 2001
+From: Iyappan Subramanian <isubramanian@amamperecomputing.com>
+Date: Fri, 31 Mar 2023 18:59:51 +0000
+Subject: [PATCH 1/2] Add torchscript freeze
+
+---
+ export.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/export.py b/export.py
+index 595039b..2bcd177 100644
+--- a/export.py
++++ b/export.py
+@@ -96,6 +96,10 @@ def export_torchscript(model, im, file, optimize, prefix=colorstr('TorchScript:'
+         f = file.with_suffix('.torchscript')
+ 
+         ts = torch.jit.trace(model, im, strict=False)
++        # Freezing a ScriptModule will clone it and attempt to inline the
++        # cloned module’s submodules, parameters, and attributes as constants
++        # in the TorchScript IR Graph
++        ts = torch.jit.freeze(ts)
+         d = {"shape": im.shape, "stride": int(max(model.stride)), "names": model.names}
+         extra_files = {'config.txt': json.dumps(d)}  # torch._C.ExtraFilesMap()
+         if optimize:  # https://pytorch.org/tutorials/recipes/mobile_interpreter.html
+-- 
+2.25.1
+

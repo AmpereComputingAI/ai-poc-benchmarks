@@ -1,0 +1,25 @@
+From b5a757ee56864c293f5876842aa9e765299b3f78 Mon Sep 17 00:00:00 2001
+From: Iyappan Subramanian <isubramanian@amamperecomputing.com>
+Date: Mon, 3 Apr 2023 18:04:59 +0000
+Subject: [PATCH 2/2] Changed logger level
+
+---
+ ultralytics/yolo/engine/predictor.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ultralytics/yolo/engine/predictor.py b/ultralytics/yolo/engine/predictor.py
+index 66342bd..a374865 100644
+--- a/ultralytics/yolo/engine/predictor.py
++++ b/ultralytics/yolo/engine/predictor.py
+@@ -202,7 +202,7 @@ class BasePredictor:
+ 
+             # Print time (inference-only)
+             if self.args.verbose:
+-                LOGGER.info(f'{s}{self.dt[1].dt * 1E3:.1f}ms')
++                LOGGER.debug(f'{s}{self.dt[1].dt * 1E3:.1f}ms')
+ 
+         # Release assets
+         if isinstance(self.vid_writer[-1], cv2.VideoWriter):
+-- 
+2.25.1
+
