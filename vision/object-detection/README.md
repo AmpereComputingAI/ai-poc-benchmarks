@@ -2,19 +2,19 @@
 
 This guide outlines the necessary steps to set up the host and docker environments, and run benchmarks for YOLOv5 and YOLOv8.
 
-# Host Setup
+## Host Setup
 Execute the following script to complete the host setup which includes preparing the host, installing docker and docker-compose, downloading YOLOv5, YOLOv8 source code, and applying patches.
 ```
 $ ./setup-host.sh
 ```
 
-# Docker Setup
+## Docker Setup
 Execute the following script to start the docker container with volume mount and install pre-requisites for YOLOv5 and YOLOv8 source.
 ```
 $ ./setup-docker.sh
 ```
 
-# Running Benchmarks
+## Running Benchmarks
 Execute the following script on the host (not on the docker) to run benchmarks for YOLOv5 and YOLOv8. The script runs the benchmark for nano and small models, for 3 times, and logs can be found at `yolov5/results.log` and `yolov8/results.log`.
 ```
 $ ./run.sh 
