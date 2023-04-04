@@ -2,6 +2,17 @@
 
 This guide outlines the necessary steps to set up the host and docker environments, and run benchmarks for YOLOv5 and YOLOv8.
 
+## Get Ampere Altra System
+Before running the demos, please create a 32 cores Ampere instance (You may use lower number of cores if you choose to run at a lower number of threads) on one of our cloud service provider partners.
+
+ 
+[Oracle Cloud Ampere A1 instance](https://www.oracle.com/cloud/compute/pricing.html)  
+[Google Cloud GCP t2a instance](https://cloud.google.com/compute/all-pricing)  
+[Azure Dps/Dpds v5](https://www.enterpriseai.news/2022/04/05/microsoft-azure-adds-altra-arm-based-virtual-machines/)  
+[Tencent SR1](https://pcr.cloud-mercato.com/providers/tencent/flavors/sr1.16xlarge128/pricing)
+
+Please visit Ampere Computing webpage [Ampere Solutions](https://amperecomputing.com/solutions) for the latest information about our wide selection of compute platforms.
+
 ## Host Setup
 Execute the following script to complete the host setup which includes preparing the host, installing docker and docker-compose, downloading YOLOv5, YOLOv8 source code, and applying patches.
 ```
