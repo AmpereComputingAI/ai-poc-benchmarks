@@ -5,7 +5,7 @@ This guide outlines the necessary steps to set up the host and docker environmen
 ## Get Ampere Altra System
 Before running the demos, please create a 32 cores Ampere instance (You may use lower number of cores if you choose to run at a lower number of threads) on one of our cloud service provider partners.
 
- 
+
 [Oracle Cloud Ampere A1 instance](https://www.oracle.com/cloud/compute/pricing.html)  
 [Google Cloud GCP t2a instance](https://cloud.google.com/compute/all-pricing)  
 [Azure Dps/Dpds v5](https://www.enterpriseai.news/2022/04/05/microsoft-azure-adds-altra-arm-based-virtual-machines/)  
