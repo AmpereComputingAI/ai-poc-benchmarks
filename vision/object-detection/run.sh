@@ -4,7 +4,7 @@
 
 # Yolov5
 workdir="/workspace/ai-poc-benchmarks/vision/object-detection"
-cont_name="yolo-aio-pytorch-1.5.1"
+cont_name="yolo-aio-pytorch-1.5.2"
 script="/workspace/ai-poc-benchmarks/vision/object-detection/benchmark-yolov5.sh"
 
 # Log files: yolov5-6.2/out.log yolov5-6.2/results.log

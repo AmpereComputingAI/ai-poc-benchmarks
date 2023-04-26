@@ -1,12 +1,12 @@
 #!/bin/bash
 
 cont_id="amperecomputingai/pytorch"
-tag="1.5.1"
+tag="1.5.2"
 
 echo "docker pull $cont_id:$tag"
 docker pull -q $cont_id:$tag
 
-cont_name="yolo-aio-pytorch-1.5.1"
+cont_name="yolo-aio-pytorch-1.5.2"
 echo "Starting container $cont_name"
 
 docker run \
